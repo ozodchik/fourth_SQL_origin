@@ -68,7 +68,19 @@ insert_executors_albums = connection.execute('''INSERT INTO
 ''')
 print(insert_executors_albums)
 
-
+# Insert. заполним таблицу связей Executors_Genres
+insert_executors_genres = connection.execute('''INSERT INTO
+    Executors_Genres(id_of_executor, id_of_genre)
+    VALUES (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6, 1),
+    (7, 2),
+    (8, 3);
+''')
+print(insert_executors_genres)
 
 insert_executors_albums = connection.execute('''INSERT INTO
     trscks_collection(tracks_id, collection_id)
